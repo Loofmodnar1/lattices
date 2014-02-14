@@ -728,10 +728,14 @@ We can confirm our intuition that $f$ should be large for points that lie close 
     g_\Lambda(p) &= \sum_{x\in\Lambda} e^{-\pi \|p - x\|_2^2}
       = \frac{1}{2} \sum_{x\in\Lambda} \left( e^{-\pi \|p-x\|_2^2} + e^{-\pi \|p+x\|_2^2} \right) \\
       &= \sum_{x\in\Lambda} \frac{1}{2} \left( e^{-\pi (p^Tp - 2p^Tx + x^T x)} + e^{-\pi (p^Tp + 2p^Tx + x^Tx)} \right) \\
-      &= e^{-\pi \|p\|_2^2} \sum_{x\in\Lambda} \frac{1}{2} \left( e^{-\pi (x - 2p)^T x} + e^{-\pi (x + 2p)^T x} \right) \\
+      &= e^{-\pi \|p\|_2^2} \sum_{x\in\Lambda} e^{-\pi x^Tx} \frac{1}{2} \left( e^{2\pi p^T x} + e^{-2\pi p^T x} \right) \\
       &\geq e^{-\pi \|p\|_2^2} \sum_{x\in\Lambda} e^{-\pi x^Tx} = e^{-\pi \|p\|_2^2} g_\Lambda(0),
   \end{align*}
-  where the inequality follows from convexity.
+  where the inequality follows from 
+  \[
+    \forall a \in \mathbb{R} ~ e^{a} + e^{-a} \geq 2,
+  \]
+  which holds by convexity.
   This implies the result because $\Lambda$-periodicity allows us
   to assume $\|p\|_2 = d(p,\Lambda)$ without loss of generality.
 \end{proof}
