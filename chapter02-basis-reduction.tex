@@ -484,15 +484,15 @@ We can now give an improved version of Lemma~\ref{lemma:reduce-phi-decreases} fo
   Each component of $B_j^T B_j$ is integer and bounded in absolute value by $dM^2$.
   Using the Hadamard bound (see the exercises), we get:
   \[
-    \det(B_j^T B_j) \leq \prod_{i=1}^j \| (B_j^T B_j)_i \|_2 \leq (d^2M^2)^{d/2}
+    \det(B_j^T B_j) \leq \prod_{i=1}^j \| (B_j^T B_j)_i \|_2 \leq (d^3M^4)^{d/2}
   \]
   This gives us
   \[
-    \Phi(B) \leq (d^2 M^2)^{d^2/2}.
+    \Phi(B) \leq (d^3 M^4)^{d^2/2}.
   \]
   Plugging this into~\eqref{eq:LLL-Phi-iterations} and taking logarithms, we get
   \[
-    t \log(4/3) < d^2 \log(dM) \qedhere
+    t \log(4/3) < 2d^2 \log(dM) \qedhere
   \]
 \end{proof}
 
