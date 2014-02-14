@@ -1178,7 +1178,7 @@ are found in the exercises.
   \]
   For $t^\star \in \R$, we get
   \[
-    0 = \sigma(t^\star) - \lim_{\varepsilon \to 0+} \sigma(t^\star - \varepsilon) = \sum_{i: t_i = t^\star} \alpha_i.
+    0 = \sigma(t^\star) - \lim_{\varepsilon \downarrow 0} \sigma(t^\star - \varepsilon) = \sum_{i: t_i = t^\star} \alpha_i.
   \]
   Overall, we obtain
   \[
@@ -1221,7 +1221,7 @@ are found in the exercises.
   \]
   for $\varepsilon > 0$ to define
   \[
-    \cD(f)(y) := \mu(f) - \lim_{\varepsilon \to 0} \mu(K_\varepsilon(\cdot, y) \cdot f).
+    \cD(f)(y) := \mu(f) - \lim_{\varepsilon \downarrow 0} \mu(K_\varepsilon(\cdot, y) \cdot f).
   \]
   For a fixed $y \in \R^d$,
   the map $K_\varepsilon(\cdot, y): \R^d \to \R$ is the indicator function
@@ -1238,9 +1238,9 @@ are found in the exercises.
   with $P_i \in \cP^d$.
   We can compute
   \begin{align*}
-    \lim_{\varepsilon \to 0} \mu(K_\varepsilon(\cdot, y) \cdot f)
-      &= \sum_i \alpha_i \cdot \lim_{\varepsilon \to 0} \mu(K_\varepsilon(\cdot, y) \cdot [P_i]) \\
-      &= \sum_i \alpha_i \cdot \lim_{\varepsilon \to 0} \mu([P_i \cap \{ x ~:~ y^Tx \geq 1 + \varepsilon \}])
+    \lim_{\varepsilon \downarrow 0} \mu(K_\varepsilon(\cdot, y) \cdot f)
+      &= \sum_i \alpha_i \cdot \lim_{\varepsilon \downarrow 0} \mu(K_\varepsilon(\cdot, y) \cdot [P_i]) \\
+      &= \sum_i \alpha_i \cdot \lim_{\varepsilon \downarrow 0} \mu([P_i \cap \{ x ~:~ y^Tx \geq 1 + \varepsilon \}])
   \end{align*}
   The term $\mu([P_i \cap \{ x ~:~ y^Tx \geq 1 + \varepsilon \}])$ is either $0$ or $1$,
   and it is monotonically increasing as $\varepsilon$ goes to $0$ from above, so the limit exists.
@@ -2003,7 +2003,7 @@ We can now state the main algorithmic result of this chapter:
       \item Let $\pi : \R^d \to \R$ be a projection, say on the first coordinate.
         For $f \in \R\cP_b^d$, let $\mu_t(f) := \mu_{d-1}(f|_{\pi^{-1}(t)})$, where $\mu_{d-1}$ is the $(d-1)$-dimensional Euler characteristic.
 
-        Show: For all $f \in \R\cP_b^d$ one has $\mu(f) = \sum_{t \in \R} \mu_t(f) - \lim_{\varepsilon \to 0+} \mu_{t-\varepsilon}(f)$.
+        Show: For all $f \in \R\cP_b^d$ one has $\mu(f) = \sum_{t \in \R} \mu_t(f) - \lim_{\varepsilon \downarrow 0} \mu_{t-\varepsilon}(f)$.
 
       \item Let $P \in \cP_b^d$ be a full-dimensional polytope.
 
