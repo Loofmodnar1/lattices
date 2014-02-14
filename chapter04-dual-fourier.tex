@@ -312,8 +312,8 @@ see Figure~\ref{fig:lattice-width-ball}:
 \end{lemma}
 \begin{proof}
   \[
-    w(B(z,r)) = \min_{y \in \Lambda^\star \setminus 0} w_y(B(z,r))
-      = \min_{y \in \Lambda^\star \setminus 0} 2r \|y\|_2 = 2r \lambda_1^\star
+    w(B(z,r)) = \min_{y \in \Lambda^\star \setminus \{0\} } w_y(B(z,r))
+      = \min_{y \in \Lambda^\star \setminus \{0\} } 2r \|y\|_2 = 2r \lambda_1^\star
     \qedhere
   \]
 \end{proof}
@@ -488,7 +488,7 @@ Let us establish some basic facts about $\langle \cdot, \cdot \rangle_\Lambda$ a
 \end{lemma}
 \begin{proof}
   One easily checks that $\langle \cdot, \cdot \rangle_\Lambda$
-  is a scalar product, that is, it satisfies linearity, conjugate symmetry, and positive definiteness.
+  is a scalar product, that is, it satisfies sesquilinearity, conjugate symmetry, and positive definiteness.
 
   For the second part,
   the intuitive idea is that we can slice $P$ along the tiling defined by $\cP_B$

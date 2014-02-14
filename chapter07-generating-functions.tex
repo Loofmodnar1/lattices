@@ -223,7 +223,7 @@ and $\cone{U}$ is the smallest cone containing $U$.
   \[
     L(P) := \{ v \in \R^d ~:~ \forall x\in P \,\forall \lambda \in \R:~ x + \lambda v \in P  \}
   \]
-  If $L(P) = 0$, $P$ is called \emph{pointed}.
+  If $L(P) = \{ 0 \}$, $P$ is called \emph{pointed}.
 \end{definition}
 
 It is not difficult to check that $L(P)$ is a linear subspace of $\R^d$.
@@ -231,7 +231,7 @@ Intuitively, $L(P)$ contains the directions of lines contained in $P$.
 Polyhedra containing lines are somewhat unusual in the sense
 that if one thinks of polyhedra, one usually thinks of polyhedra that have vertices,
 and such polyhedra \emph{do not} contain lines.
-That is, their lineality space is $0$.
+That is, their lineality space is $\{ 0 \}$.
 However, polyhedra with lines are essential for the development of compact rational generating functions.
 
 The following facts tie cones, polarity, and lineality spaces together.
@@ -567,7 +567,7 @@ The relationships between those families of polyhedra are as follows:
   \label{lemma:inclusion-exclusion}
   Let $P_1, \ldots, P_m \in \cP^d$.
   Then
-  $[A_1 \cup \dots \cup A_m] = \sum_{\emptyset \neq I \subseteq [m]} (-1)^{|I| - 1} [\bigcap_{i \in I} A_i]$.
+  $[P_1 \cup \dots \cup P_m] = \sum_{\emptyset \neq I \subseteq [m]} (-1)^{|I| - 1} [\bigcap_{i \in I} P_i]$.
 \end{lemma}
 \begin{proof}
   Left as an exercise.
